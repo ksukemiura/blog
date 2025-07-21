@@ -25,7 +25,7 @@ export function middleware(request: NextRequest): NextResponse {
   }
 
   const url = request.nextUrl.clone();
-  url.pathname = `/${language}`;
+  url.pathname = `/${language}${pathname}`;
   return NextResponse.redirect(url);
 }
 
